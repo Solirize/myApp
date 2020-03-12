@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleSignIn
+import CoreData
 
 class SecondViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let cellId = "CellID"
@@ -43,11 +44,35 @@ class SecondViewController: UICollectionViewController, UICollectionViewDelegate
     
     func setupNavBar() {
         navigationItem.title = "Hello there!"
-        let rB = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        rB.backgroundColor = .red
-        rB.addTarget(self, action: #selector(handleRightButtonPress), for: .touchUpInside)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rB)
+        let rightButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        rightButton.backgroundColor = .red
+        rightButton.addTarget(self, action: #selector(handleRightButtonPress), for: .touchUpInside)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightButton)
     }
+    
+    // MARK: - Core Data stack
+    lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "coreDataTesting")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
+    
+    // MARK: - Core Data Saving support
+    func saveContext () {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+    }	
 }
 
 extension SecondViewController {
@@ -106,3 +131,4 @@ extension   SecondViewController {
         present(ac, animated: true, completion: nil)
     }
 }
+

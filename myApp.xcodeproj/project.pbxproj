@@ -11,6 +11,7 @@
 		84035B1D2412597A006DA014 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84035B1C2412597A006DA014 /* GoogleService-Info.plist */; };
 		84035B1F24125DA4006DA014 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84035B1E24125DA4006DA014 /* SecondViewController.swift */; };
 		84035B2124125EE5006DA014 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84035B2024125EE5006DA014 /* MyCell.swift */; };
+		843B5D2B2417B85400CFC0FA /* myApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 843B5D292417B85400CFC0FA /* myApp.xcdatamodeld */; };
 		848FA9D024111D87002AD26F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FA9CF24111D87002AD26F /* AppDelegate.swift */; };
 		848FA9D224111D87002AD26F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FA9D124111D87002AD26F /* ViewController.swift */; };
 		848FA9D724111D87002AD26F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848FA9D624111D87002AD26F /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		84035B1C2412597A006DA014 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84035B1E24125DA4006DA014 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		84035B2024125EE5006DA014 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		843B5D2A2417B85400CFC0FA /* myApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myApp.xcdatamodel; sourceTree = "<group>"; };
 		848FA9CC24111D87002AD26F /* myApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848FA9CF24111D87002AD26F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848FA9D124111D87002AD26F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				84035B2024125EE5006DA014 /* MyCell.swift */,
 				848FA9D624111D87002AD26F /* Assets.xcassets */,
 				848FA9D824111D87002AD26F /* LaunchScreen.storyboard */,
+				843B5D292417B85400CFC0FA /* myApp.xcdatamodeld */,
 				848FA9DB24111D87002AD26F /* Info.plist */,
 				84035B1C2412597A006DA014 /* GoogleService-Info.plist */,
 			);
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84035B1F24125DA4006DA014 /* SecondViewController.swift in Sources */,
+				843B5D2B2417B85400CFC0FA /* myApp.xcdatamodeld in Sources */,
 				84035B2124125EE5006DA014 /* MyCell.swift in Sources */,
 				848FA9D224111D87002AD26F /* ViewController.swift in Sources */,
 				848FA9D024111D87002AD26F /* AppDelegate.swift in Sources */,
@@ -408,6 +412,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		843B5D292417B85400CFC0FA /* myApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				843B5D2A2417B85400CFC0FA /* myApp.xcdatamodel */,
+			);
+			currentVersion = 843B5D2A2417B85400CFC0FA /* myApp.xcdatamodel */;
+			path = myApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 848FA9C424111D87002AD26F /* Project object */;
 }

@@ -1,3 +1,10 @@
+/*
+ while (alive){
+    eat()
+    sleep()
+    code()
+}
+*/
 //
 //  ViewController.swift
 //  myApp
